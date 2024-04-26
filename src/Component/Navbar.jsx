@@ -25,12 +25,16 @@ const Navbar = () => {
       >
         All Tourists Spot
       </NavLink>
-      <NavLink
-        to="/addTourists"
-        className={({ isActive }) => (isActive ? "border-b-2" : "border-none")}
-      >
-        Add Tourists Spot
-      </NavLink>
+      {user && (
+        <NavLink
+          to="/addTourists"
+          className={({ isActive }) =>
+            isActive ? "border-b-2" : "border-none"
+          }
+        >
+          Add Tourists Spot
+        </NavLink>
+      )}
       <NavLink
         to="/mylist"
         className={({ isActive }) => (isActive ? "border-b-2" : "border-none")}
@@ -93,9 +97,8 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm dropdown-content mt-3 z-50 p-2 shadow bg-base-100 rounded-box w-52"
             >
-              
               <li>
                 <button onClick={handleLogOut} className="btn">
                   Log Out
@@ -104,7 +107,7 @@ const Navbar = () => {
             </ul>
           </div>
         ) : (
-          <Link className="btn" to="/login">
+          <Link to="/login" className="btn">
             Login
           </Link>
         )}

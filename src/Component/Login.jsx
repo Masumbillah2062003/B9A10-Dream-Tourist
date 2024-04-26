@@ -5,8 +5,7 @@ import { AuthContext } from "../Provider/AuthProvider";
 import toast from "react-hot-toast";
 
 const Login = () => {
-
-    const {signIn} = useContext(AuthContext)
+  const { signIn, loading } = useContext(AuthContext);
 
   const {
     register,
@@ -15,20 +14,30 @@ const Login = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    const {email, password} = data
-
-  
+    const { email, password } = data;
 
     signIn(email, password)
-    .then(result => {
-        console.log(result.user)
-        return toast.success("your login successfull")
-    })
-    .catch(error => {
-        console.log(error)
-        
-    })
+      .then((result) => {
+        console.log(result.user);
+        return toast.success("your login successfull");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
+
+  if (loading) {
+    return (
+      <div className="w-full h-[550px] flex justify-center items-center">
+        <h1 className="text-5xl font-semibold">
+          Loading <span className="loading loading-ball loading-xs"></span>
+          <span className="loading loading-ball loading-sm"></span>
+          <span className="loading loading-ball loading-md"></span>
+          <span className="loading loading-ball loading-lg"></span>
+        </h1>
+      </div>
+    );
+  }
   return (
     <div className="py-10 flex items-center justify-center">
       <div className="w-[550px] border-2 border-[#6d4416] px-10 py-8">

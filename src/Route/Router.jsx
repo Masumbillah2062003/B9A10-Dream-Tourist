@@ -7,6 +7,8 @@ import AddTourists from "../Component/AddTourists";
 import MyList from "../Component/MyList";
 import Login from "../Component/Login";
 import Register from "../Component/Register";
+import TourDetails from "../Component/TourDetails";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -20,12 +22,17 @@ const router = createBrowserRouter([
         loader: ()=> fetch("http://localhost:5000/assignment")
       },
       {
+        path: "/data/:id",
+        element: <PrivateRoute><TourDetails></TourDetails></PrivateRoute>,
+        loader: ({params}) => fetch(`http://localhost:5000/assignment/${params.id}`)
+      },
+      {
         path: "/allTourists",
         element: <AllTourists></AllTourists>
       },
       {
         path: "/addTourists",
-        element: <AddTourists></AddTourists>
+        element: <PrivateRoute><AddTourists></AddTourists></PrivateRoute>
       },
       {
         path: "/mylist",

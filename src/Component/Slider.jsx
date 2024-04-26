@@ -5,9 +5,9 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { A11y, Navigation, Pagination, Scrollbar } from "swiper/modules";
 
-import martin from "../assets/images/sentmartin.jpg";
-import coxs from "../assets/images/coxsbazar.jpg";
-import sundor from "../assets/images/sundorban.jpg";
+import martin from "../assets/images/martin.jpg";
+import coxs from "../assets/images/coxs.jpg";
+import sundor from "../assets/images/sundor.jpg";
 
 const Slider = () => {
   return (
