@@ -1,13 +1,12 @@
-
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
-
-
+import { updateProfile } from "firebase/auth";
+import toast from "react-hot-toast";
 
 const Register = () => {
-    const {createSignUp} = useContext(AuthContext)
+  const { createSignUp } = useContext(AuthContext);
 
   const {
     register,
@@ -19,13 +18,34 @@ const Register = () => {
     const { name, email, photo, password } = data;
     console.log(name, photo, email, password);
 
-    createSignUp( email, password)
-    .then(result => {
-        console.log(result.user)
-    }) 
-    .catch(error => {
-        console.error(error)
-    })
+
+    if(password.length < 6){
+        console.log('password least 6 chraacter or longer')
+        return toast.error("password least 6 chraacter or longer")
+    }
+    else if(!/[A-Z]/.test(password)){
+        console.log('your password should have at least one upper case characters [[A-Z]]')
+        return toast.error("your password should have at least one upper case characters [[A-Z]]")
+    }
+    else if(!/[a-z]/.test(password)){
+        console.log('your password should have at least one upper case characters [[a-z]]')
+        return toast.error("your password should have at least one upper case characters [[a-z]]")
+    }
+
+
+    createSignUp(email, password)
+      .then((result) => {
+        console.log(result.user);
+        updateProfile(result.user, {
+          displayName: name,
+          photoURL: photo,
+        });
+        return toast.success("your register successfull")
+      })
+      .catch((error) => {
+        console.error(error);
+        return toast.error(error.message)
+      });
   };
   return (
     <div className="h-auto py-10 flex items-center justify-center">

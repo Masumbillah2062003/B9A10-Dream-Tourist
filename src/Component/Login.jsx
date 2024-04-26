@@ -1,7 +1,13 @@
+import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../Provider/AuthProvider";
+import toast from "react-hot-toast";
 
 const Login = () => {
+
+    const {signIn} = useContext(AuthContext)
+
   const {
     register,
     handleSubmit,
@@ -9,7 +15,19 @@ const Login = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
+    const {email, password} = data
+
+  
+
+    signIn(email, password)
+    .then(result => {
+        console.log(result.user)
+        return toast.success("your login successfull")
+    })
+    .catch(error => {
+        console.log(error)
+        
+    })
   };
   return (
     <div className="py-10 flex items-center justify-center">
