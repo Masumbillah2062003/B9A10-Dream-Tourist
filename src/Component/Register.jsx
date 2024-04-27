@@ -63,20 +63,20 @@ const Register = () => {
   } 
   return (
     <div className="h-auto py-10 flex items-center justify-center px-3">
-      <div className="w-[550px] border-2 border-[#6d4416] lg:px-10 px-2 py-8">
-        <h1 className="text-center text-4xl font-bold text-[#6d4416]">
+      <div className="w-[550px] border-2 border-[#e8604c] lg:px-10 px-2 py-8">
+        <h1 className="text-center text-4xl font-bold text-[#e8604c]">
           Register
         </h1>
         <form onSubmit={handleSubmit(handleRegister)} className="mt-8">
           <label className="block">
-            <span className="text-[#6d4416] font-medium text-xl py-2 block">
+            <span className="text-[#e8604c] font-medium text-xl py-2 block">
               {" "}
               Name*
             </span>
             <input
               type="text"
               placeholder="Please Enter Your Name"
-              className="w-full border-2 border-[#6d4416] rounded-md px-4 py-3 outline-none"
+              className="w-full border-2 border-[#e8604c] rounded-md px-4 py-3 outline-none"
               {...register("name", { required: true })}
             />
             {errors.name && (
@@ -84,14 +84,14 @@ const Register = () => {
             )}
           </label>
           <label className="block">
-            <span className="text-[#6d4416] font-medium text-xl py-2 block">
+            <span className="text-[#e8604c] font-medium text-xl py-2 block">
               {" "}
               Email*
             </span>
             <input
               type="email"
               placeholder="Please Enter Your Email"
-              className="w-full border-2 border-[#6d4416] rounded-md px-4 py-3 outline-none"
+              className="w-full border-2 border-[#e8604c] rounded-md px-4 py-3 outline-none"
               {...register("email", { required: true })}
             />
             {errors.email && (
@@ -100,27 +100,27 @@ const Register = () => {
           </label>
 
           <label className="block">
-            <span className="text-[#6d4416] font-medium text-xl py-2 block">
+            <span className="text-[#e8604c] font-medium text-xl py-2 block">
               {" "}
               Photo URL
             </span>
             <input
               type="text"
               placeholder="Please Enter Your Photo URL"
-              className="w-full border-2 border-[#6d4416] rounded-md px-4 py-3 outline-none"
+              className="w-full border-2 border-[#e8604c] rounded-md px-4 py-3 outline-none"
               {...register("photo")}
             />
           </label>
 
           <label className="block">
-            <span className="text-[#6d4416] font-medium text-xl py-2 block">
+            <span className="text-[#e8604c] font-medium text-xl py-2 block">
               {" "}
               Password*
             </span>
             <input
               type="password"
               placeholder="Please Enter Your Password"
-              className="w-full border-2 border-[#6d4416] rounded-md px-4 py-3 outline-none"
+              className="w-full border-2 border-[#e8604c] rounded-md px-4 py-3 outline-none"
               {...register("password", { required: true })}
             />
             {errors.password && (
@@ -132,7 +132,7 @@ const Register = () => {
             <input
               type="submit"
               value="Register"
-              className="w-full bg-[#6d4416] btn hover:bg-[#6d4416] text-white text-xl font-semibold outline-none"
+              className="w-full bg-[#e8604c] btn hover:bg-[#e8604c] text-white text-xl font-semibold outline-none"
             />
           </label>
         </form>

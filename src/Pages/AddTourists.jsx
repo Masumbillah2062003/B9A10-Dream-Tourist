@@ -53,143 +53,143 @@ const AddTourists = () => {
   };
   return (
     <div className="container mx-auto px-[135px] py-14">
-      <h1 className="text-4xl mb-5 font-bold text-center text-[#6d4416]">
+      <h1 className="text-4xl mb-5 font-bold text-center text-[#e8604c]">
         Add Tourists Spot
       </h1>
       <form onSubmit={handleDataSubmit}>
         <div className="flex gap-8">
           <label className="w-1/2">
-          <span className="text-[#6d4416] font-medium text-xl py-2 block">
+          <span className="text-[#e8604c] font-medium text-xl py-2 block">
               User Name
             </span>
             <input
               type="text"
               name="userName"
               placeholder="Please Enter Your Name"
-              className="w-full border-2 border-[#6d4416] rounded-md px-4 py-3 outline-none"
+              className="w-full border-2 border-[#e8604c] rounded-md px-4 py-3 outline-none"
             />
           </label>
           <label className="w-1/2">
-            <span className="text-[#6d4416] font-medium text-xl py-2 block">
+            <span className="text-[#e8604c] font-medium text-xl py-2 block">
               User Email
             </span>
             <input
               type="text"
               name="userEmail"
               placeholder="Please Enter Your Name"
-              className="w-full border-2 border-[#6d4416] rounded-md px-4 py-3 outline-none"
+              className="w-full border-2 border-[#e8604c] rounded-md px-4 py-3 outline-none"
             />
           </label>
           
         </div>
         <div className="flex gap-8">
         <label className="w-1/2">
-            <span className="text-[#6d4416] font-medium text-xl py-2 block">
+            <span className="text-[#e8604c] font-medium text-xl py-2 block">
               Tourists Spot Name
             </span>
             <input
               type="text"
               name="touristsName"
               placeholder="Please Enter Your Name"
-              className="w-full border-2 border-[#6d4416] rounded-md px-4 py-3 outline-none"
+              className="w-full border-2 border-[#e8604c] rounded-md px-4 py-3 outline-none"
             />
           </label>
           <label className="w-1/2">
-            <span className="text-[#6d4416] font-medium text-xl py-2 block">
+            <span className="text-[#e8604c] font-medium text-xl py-2 block">
               Country Name
             </span>
             <input
               type="text"
               name="countryName"
               placeholder="Please Enter Your Name"
-              className="w-full border-2 border-[#6d4416] rounded-md px-4 py-3 outline-none"
+              className="w-full border-2 border-[#e8604c] rounded-md px-4 py-3 outline-none"
             />
           </label>
           
         </div>
         <div className="flex gap-8">
           <label className="w-1/2">
-            <span className="text-[#6d4416] font-medium text-xl py-2 block">
+            <span className="text-[#e8604c] font-medium text-xl py-2 block">
               Short Description
             </span>
             <input
               type="text"
               name="shortDescription"
               placeholder="Please Enter Your Name"
-              className="w-full border-2 border-[#6d4416] rounded-md px-4 py-3 outline-none"
+              className="w-full border-2 border-[#e8604c] rounded-md px-4 py-3 outline-none"
             />
           </label>
           <label className="w-1/2">
-            <span className="text-[#6d4416] font-medium text-xl py-2 block">
+            <span className="text-[#e8604c] font-medium text-xl py-2 block">
               Average Cost
             </span>
             <input
               type="text"
               name="averageCost"
               placeholder="Please Enter Your Name"
-              className="w-full border-2 border-[#6d4416] rounded-md px-4 py-3 outline-none"
+              className="w-full border-2 border-[#e8604c] rounded-md px-4 py-3 outline-none"
             />
           </label>
         </div>
         <div className="flex gap-8">
           <label className="w-1/2">
-            <span className="text-[#6d4416] font-medium text-xl py-2 block">
+            <span className="text-[#e8604c] font-medium text-xl py-2 block">
               Seasonality
             </span>
             <input
               type="text"
               name="seasonality"
               placeholder="Please Enter Your Name"
-              className="w-full border-2 border-[#6d4416] rounded-md px-4 py-3 outline-none"
+              className="w-full border-2 border-[#e8604c] rounded-md px-4 py-3 outline-none"
             />
           </label>
           <label className="w-1/2">
-            <span className="text-[#6d4416] font-medium text-xl py-2 block">
+            <span className="text-[#e8604c] font-medium text-xl py-2 block">
               Travel Time
             </span>
             <input
               type="text"
               name="travelTime"
               placeholder="Please Enter Your Name"
-              className="w-full border-2 border-[#6d4416] rounded-md px-4 py-3 outline-none"
+              className="w-full border-2 border-[#e8604c] rounded-md px-4 py-3 outline-none"
             />
           </label>
         </div>
         <div className="flex gap-8">
           <label className="w-1/2">
-            <span className="text-[#6d4416] font-medium text-xl py-2 block">
+            <span className="text-[#e8604c] font-medium text-xl py-2 block">
               Total Visitors PerYear
             </span>
             <input
               type="text"
               name="totalVisitors"
               placeholder="Please Enter Your Name"
-              className="w-full border-2 border-[#6d4416] rounded-md px-4 py-3 outline-none"
+              className="w-full border-2 border-[#e8604c] rounded-md px-4 py-3 outline-none"
             />
           </label>
           <label className="w-1/2">
-            <span className="text-[#6d4416] font-medium text-xl py-2 block">
+            <span className="text-[#e8604c] font-medium text-xl py-2 block">
               Location
             </span>
             <input
               type="text"
               name="location"
               placeholder="Please Enter Your Name"
-              className="w-full border-2 border-[#6d4416] rounded-md px-4 py-3 outline-none"
+              className="w-full border-2 border-[#e8604c] rounded-md px-4 py-3 outline-none"
             />
           </label>
         </div>
         <div className="flex gap-8">
             
           <label className="w-full">
-          <span className="text-[#6d4416] font-medium text-xl py-2 block">
+          <span className="text-[#e8604c] font-medium text-xl py-2 block">
               Image URL
             </span>
             <input
               type="text"
               name="image"
               placeholder="Please Enter Your Name"
-              className="w-full border-2 border-[#6d4416] rounded-md px-4 py-3 outline-none"
+              className="w-full border-2 border-[#e8604c] rounded-md px-4 py-3 outline-none"
             />
           </label>
         </div>
@@ -197,7 +197,7 @@ const AddTourists = () => {
           <input
             type="submit"
             value="Add"
-            className="w-full btn border-2 bg-[#6d4416] hover:bg-transparent hover:border-[#6d4416] rounded-md font-bold text-xl text-white hover:text-[#6d4416] outline-none mt-5 "
+            className="w-full btn border-2 bg-[#e8604c] hover:bg-transparent hover:border-[#e8604c] rounded-md font-bold text-xl text-white hover:text-[#e8604c] outline-none mt-5 "
           />
         </div>
       </form>

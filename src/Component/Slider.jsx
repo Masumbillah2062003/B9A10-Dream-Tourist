@@ -6,8 +6,8 @@ import "swiper/css/scrollbar";
 import { A11y, Navigation, Pagination, Scrollbar } from "swiper/modules";
 
 import martin from "../assets/images/martin.jpg";
-import coxs from "../assets/images/coxs.jpg";
-import sundor from "../assets/images/sundor.jpg";
+import bangkok from "../assets/images/bangkok.jpg"
+import malaysia from "../assets/images/Malaysia.jpg";
 
 const Slider = () => {
   return (
@@ -26,10 +26,10 @@ const Slider = () => {
         >
           <SwiperSlide className="h-[550px] relative">
             <img src={martin} alt="" className="w-full h-[550px]" />
-            <div className="absolute top-0 flex justify-around w-full h-full">
+            <div className="absolute top-0 flex justify-around w-full h-full bg-[#313041a0]">
               <div className="flex flex-col justify-center items-center">
-                <div className="backdrop-blur-sm p-6 rounded-lg text-center">
-                  <h1 className="text-[#6d4416] text-6xl font-bold">
+                <div className=" p-6 rounded-lg text-center ">
+                  <h1 className="text-[#e8604c] text-6xl font-bold">
                     St. Martins Island
                   </h1>
                   <p className="w-[700px] text-white text-xl mt-3">
@@ -44,30 +44,30 @@ const Slider = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide className="h-[550px] relative">
-            <img src={coxs} alt="" className="w-full h-[550px]" />
-            <div className="absolute top-0 flex justify-around w-full h-full">
+            <img src={bangkok} alt="" className="w-full h-[550px]" />
+            <div className="absolute top-0 flex justify-around w-full h-full bg-[#313041a0]">
               <div className="flex flex-col justify-center items-start">
-                <div className="backdrop-blur-sm p-6 rounded-lg ">
-                  <h1 className="text-[#6d4416] text-6xl font-bold">
-                    Coxs Bazar
+                <div className=" p-6 rounded-lg ">
+                  <h1 className="text-[#e8604c] text-6xl font-bold">
+                  Bangkok, Thailand
                   </h1>
                   <p className="w-[700px] text-white text-xl mt-3">
-                  Cox`s Bazar is a city, fishing port, tourism center, and district headquarters in southeastern Bangladesh. It is famous mostly for its long natural sandy beach, and it is infamous for the largest refugee camp in the world. It is located 150 km (93 mi) south of the divisional headquarter city of Chittagong.
+                  Bangkok is renowned for its vibrant street life, rich cultural heritage, and majestic temples like the Grand Palace and Wat Arun. It is also famous for its bustling markets, delectable cuisine, and lively nightlife. Why is Bangkok so popular? Bangkok`s popularity stems from its diverse attractions and experiences
                   </p>
                 </div>
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide className="h-[550px] relative">
-            <img src={sundor} alt="" className="w-full h-[550px]" />
-            <div className="absolute top-0 flex justify-around w-full h-full">
+            <img src={malaysia} alt="" className="w-full h-[550px]" />
+            <div className="absolute top-0 flex justify-around w-full h-full bg-[#313041a0]">
               <div className="flex flex-col justify-center items-start">
-                <div className="backdrop-blur-sm p-6 rounded-lg ">
-                <h1 className="text-[#6d4416] text-6xl font-bold">
-                Bandarban
+                <div className=" p-6 rounded-lg ">
+                <h1 className="text-[#e8604c] text-6xl font-bold">
+                Kuala Lumpur, Malaysia
                   </h1>
                   <p className="w-[700px] text-white text-xl mt-3">
-                  Bandarban Hill District was once called Bohmong Htaung since the Arakanese rule. Once Bohmong Htaung was ruled by Bohmong Rajas who were the subordinates to the Arakanese kings. Ancestors of the present Bohmong dynasty were the successor of the Pegu King of Burma under the Arakans rule in Chittagong.
+                  The capital of Malaysia is widely recognized for numerous landmarks, including Petronas Twin Towers (twin skyscrapers with a sky bridge and observation deck), the Petaling Street flea market, and Batu Caves, which is over
                   </p>
                 </div>
               </div>
@@ -80,10 +80,10 @@ const Slider = () => {
         <div className="carousel w-full">
           <div id="slide1" className="carousel-item relative w-full">
             <img src={martin} className="w-full" />
-            <div className="absolute top-0 flex justify-around w-full h-full">
+            <div className="absolute top-0 flex justify-around w-full h-full bg-[#313041a0]">
               <div className="mt-10 -ml-24">
-                <div className="backdrop-blur-sm rounded-lg text-center">
-                  <h1 className="text-[#6d4416] text-base font-bold">
+                <div className=" rounded-lg text-center">
+                  <h1 className="text-[#e8604c] text-base font-bold">
                     St. Martins Island
                   </h1>
                   <p className="w-[200px] text-white text-[10px] mt-3">
@@ -94,57 +94,57 @@ const Slider = () => {
                 </div>
               </div>
             </div>
-            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-              <a href="#slide3" className="btn bg-transparent hover:bg-transparent text-white">
+            <div className="absolute flex justify-between transform -translate-y-1/2 left-[12rem] right-5 top-[80%]">
+              <a href="#slide3" className="btn bg-[#0000009b] hover:bg-[#0000009b] text-white">
                 ❮
               </a>
-              <a href="#slide2" className="btn bg-transparent hover:bg-transparent text-white">
+              <a href="#slide2" className="btn bg-[#0000009b] hover:bg-[#0000009b] text-white">
                 ❯
               </a>
             </div>
           </div>
           <div id="slide2" className="carousel-item relative w-full">
-            <img src={coxs} className="w-full" />
-            <div className="absolute top-0 flex justify-around w-full h-full">
+            <img src={bangkok} className="w-full" />
+            <div className="absolute top-0 flex justify-around w-full h-full bg-[#313041a0]">
               <div className="mt-10 -ml-24">
-                <div className="backdrop-blur-sm rounded-lg text-center">
-                  <h1 className="text-[#6d4416] text-base font-bold">
-                  Cox`s Bazar
+                <div className=" rounded-lg text-center">
+                  <h1 className="text-[#e8604c] text-base font-bold">
+                  Bangkok, Thailand
                   </h1>
                   <p className="w-[200px] text-white text-[10px] mt-3">
-                  Cox`s Bazar is a city, fishing port, tourism center, and district headquarters in southeastern Bangladesh. 
+                  Bangkok is renowned for its vibrant street life, rich cultural heritage, and majestic temples like the Grand Palace and Wat Arun.
                   </p>
                 </div>
               </div>
             </div>
-            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-              <a href="#slide1" className="btn bg-transparent hover:bg-transparent text-white ">
+            <div className="absolute flex justify-between transform -translate-y-1/2 left-[12rem] right-5 top-[80%]">
+              <a href="#slide1" className="btn bg-[#0000009b] hover:bg-[#0000009b] text-white ">
                 ❮
               </a>
-              <a href="#slide3" className="btn bg-transparent hover:bg-transparent text-white">
+              <a href="#slide3" className="btn bg-[#0000009b] hover:bg-[#0000009b] text-white">
                 ❯
               </a>
             </div>
           </div>
           <div id="slide3" className="carousel-item relative w-full">
-            <img src={sundor} className="w-full" />
-            <div className="absolute top-0 flex justify-around w-full h-full">
+            <img src={malaysia} className="w-full" />
+            <div className="absolute top-0 flex justify-around w-full h-full bg-[#313041a0]">
               <div className="mt-10 -ml-24">
-                <div className="backdrop-blur-sm rounded-lg text-center">
-                  <h1 className="text-[#6d4416] text-base font-bold">
-                  Bandarban
+                <div className=" rounded-lg text-center">
+                  <h1 className="text-[#e8604c] text-base font-bold">
+                  Kuala Lumpur, Malaysia
                   </h1>
                   <p className="w-[200px] text-white text-[10px] mt-3">
-                  Bandarban Hill District was once called Bohmong Htaung since the Arakanese rule. 
+                  The capital of Malaysia is widely recognized for numerous landmarks, including Petronas Twin Towers and Batu Caves.
                   </p>
                 </div>
               </div>
             </div>
-            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-              <a href="#slide2" className="btn bg-transparent hover:bg-transparent text-white ">
+            <div className="absolute flex justify-between transform -translate-y-1/2 left-[12rem] right-5 top-[80%]">
+              <a href="#slide2" className="btn bg-[#0000009b] hover:bg-[#0000009b] text-white ">
                 ❮
               </a>
-              <a href="#slide1" className="btn bg-transparent hover:bg-transparent text-white ">
+              <a href="#slide1" className="btn bg-[#0000009b] hover:bg-[#0000009b] text-white ">
                 ❯
               </a>
             </div>
