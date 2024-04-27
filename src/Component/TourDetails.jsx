@@ -20,7 +20,7 @@ const TourDetails = () => {
         <img src={image} alt="" className="w-full h-[500px] rounded-md" />
       </figure>
       <div>
-        <div className="flex justify-between items-center">
+        <div>
           <div>
             <h1 className="text-5xl mt-5 text-[#6d4416] font-bold p-5">
               {touristsName}
@@ -28,9 +28,6 @@ const TourDetails = () => {
             <h1 className="text-4xl text-[#6d4416] font-semibold p-5 pt-0">
               <span className="font-bold">Price : </span> {averageCost}
             </h1>
-          </div>
-          <div className="p-5">
-            <button className="btn">Add</button>
           </div>
         </div>
         <hr />

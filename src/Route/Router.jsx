@@ -2,9 +2,9 @@ import { createBrowserRouter } from "react-router-dom";
 import Root from "../Layout/Root";
 import Error from "../Component/Error";
 import Home from "../Pages/Home";
-import AllTourists from "../Component/AllTourists";
-import AddTourists from "../Component/AddTourists";
-import MyList from "../Component/MyList";
+import AllTourists from "../Pages/AllTourists";
+import AddTourists from "../Pages/AddTourists";
+import MyList from "../Pages/MyList";
 import Login from "../Component/Login";
 import Register from "../Component/Register";
 import TourDetails from "../Component/TourDetails";
@@ -28,7 +28,8 @@ const router = createBrowserRouter([
       },
       {
         path: "/allTourists",
-        element: <AllTourists></AllTourists>
+        element: <AllTourists></AllTourists>,
+        loader: ()=> fetch("http://localhost:5000/assignment")
       },
       {
         path: "/addTourists",

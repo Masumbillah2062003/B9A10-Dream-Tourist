@@ -4,8 +4,8 @@ const TourCard = ({ data }) => {
   const { _id, image, touristsName, countryName, location, averageCost } = data;
 
   return (
-    <div className="lg:w-[500px] h-[500px] w-full relative">
-      <figure className="lg:w-[500px] w-full h-[500px] overflow-hidden">
+    <div className="lg:w-[500px] lg:h-[500px] h-[400px] w-full relative">
+      <figure className="lg:w-[500px] w-full lg:h-[500px] h-[400px] overflow-hidden">
         <img
           src={image}
           alt=""

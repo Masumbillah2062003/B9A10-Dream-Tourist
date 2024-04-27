@@ -1,11 +1,14 @@
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import toast from "react-hot-toast";
 
 const Login = () => {
   const { signIn, loading } = useContext(AuthContext);
+  const location = useLocation()
+  console.log(location)
+  const navigate = useNavigate()
 
   const {
     register,
@@ -19,6 +22,7 @@ const Login = () => {
     signIn(email, password)
       .then((result) => {
         console.log(result.user);
+        navigate(location.state ? location.state : "/")
         return toast.success("your login successfull");
       })
       .catch((error) => {
@@ -39,8 +43,8 @@ const Login = () => {
     );
   }
   return (
-    <div className="py-10 flex items-center justify-center">
-      <div className="w-[550px] border-2 border-[#6d4416] px-10 py-8">
+    <div className="py-10 flex items-center justify-center px-3">
+      <div className="w-[550px] border-2 border-[#6d4416] lg:px-10 px-3 py-8">
         <h1 className="text-center text-4xl font-bold text-[#6d4416]">
           Log In
         </h1>

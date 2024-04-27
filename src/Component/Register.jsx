@@ -51,7 +51,7 @@ const Register = () => {
 
   if (loading) {
     return (
-      <div className="w-full h-[550px] flex justify-center items-center">
+      <div className="w-full h-[550px] flex justify-center items-center ">
         <h1 className="text-5xl font-semibold">
           Loading <span className="loading loading-ball loading-xs"></span>
           <span className="loading loading-ball loading-sm"></span>
@@ -62,8 +62,8 @@ const Register = () => {
     );
   } 
   return (
-    <div className="h-auto py-10 flex items-center justify-center">
-      <div className="w-[550px] border-2 border-[#6d4416] px-10 py-8">
+    <div className="h-auto py-10 flex items-center justify-center px-3">
+      <div className="w-[550px] border-2 border-[#6d4416] lg:px-10 px-2 py-8">
         <h1 className="text-center text-4xl font-bold text-[#6d4416]">
           Register
         </h1>

@@ -80,33 +80,71 @@ const Slider = () => {
         <div className="carousel w-full">
           <div id="slide1" className="carousel-item relative w-full">
             <img src={martin} className="w-full" />
+            <div className="absolute top-0 flex justify-around w-full h-full">
+              <div className="mt-10 -ml-24">
+                <div className="backdrop-blur-sm rounded-lg text-center">
+                  <h1 className="text-[#6d4416] text-base font-bold">
+                    St. Martins Island
+                  </h1>
+                  <p className="w-[200px] text-white text-[10px] mt-3">
+                    St. Martin is generally known as “Narikel Zinzira” in
+                    Bengali, means Coconut Island and this is the only coral
+                    reef island in Bangladesh. 
+                  </p>
+                </div>
+              </div>
+            </div>
             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-              <a href="#slide4" className="btn btn-circle">
+              <a href="#slide3" className="btn bg-transparent hover:bg-transparent text-white">
                 ❮
               </a>
-              <a href="#slide2" className="btn btn-circle">
+              <a href="#slide2" className="btn bg-transparent hover:bg-transparent text-white">
                 ❯
               </a>
             </div>
           </div>
           <div id="slide2" className="carousel-item relative w-full">
             <img src={coxs} className="w-full" />
+            <div className="absolute top-0 flex justify-around w-full h-full">
+              <div className="mt-10 -ml-24">
+                <div className="backdrop-blur-sm rounded-lg text-center">
+                  <h1 className="text-[#6d4416] text-base font-bold">
+                  Cox`s Bazar
+                  </h1>
+                  <p className="w-[200px] text-white text-[10px] mt-3">
+                  Cox`s Bazar is a city, fishing port, tourism center, and district headquarters in southeastern Bangladesh. 
+                  </p>
+                </div>
+              </div>
+            </div>
             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-              <a href="#slide1" className="btn btn-circle">
+              <a href="#slide1" className="btn bg-transparent hover:bg-transparent text-white ">
                 ❮
               </a>
-              <a href="#slide3" className="btn btn-circle">
+              <a href="#slide3" className="btn bg-transparent hover:bg-transparent text-white">
                 ❯
               </a>
             </div>
           </div>
           <div id="slide3" className="carousel-item relative w-full">
             <img src={sundor} className="w-full" />
+            <div className="absolute top-0 flex justify-around w-full h-full">
+              <div className="mt-10 -ml-24">
+                <div className="backdrop-blur-sm rounded-lg text-center">
+                  <h1 className="text-[#6d4416] text-base font-bold">
+                  Bandarban
+                  </h1>
+                  <p className="w-[200px] text-white text-[10px] mt-3">
+                  Bandarban Hill District was once called Bohmong Htaung since the Arakanese rule. 
+                  </p>
+                </div>
+              </div>
+            </div>
             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-              <a href="#slide2" className="btn btn-circle">
+              <a href="#slide2" className="btn bg-transparent hover:bg-transparent text-white ">
                 ❮
               </a>
-              <a href="#slide1" className="btn btn-circle">
+              <a href="#slide1" className="btn bg-transparent hover:bg-transparent text-white ">
                 ❯
               </a>
             </div>
