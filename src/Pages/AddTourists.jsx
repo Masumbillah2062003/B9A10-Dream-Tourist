@@ -71,7 +71,7 @@ const AddTourists = () => {
             <input
               type="text"
               name="userName"
-              value={user.displayName}
+              defaultValue={user.displayName}
               placeholder="Please Enter Your Name"
               className="w-full border-2 border-[#e8604c] rounded-md px-4 py-3 outline-none"
             />
@@ -83,7 +83,7 @@ const AddTourists = () => {
             <input
               type="text"
               name="userEmail"
-              value={user.email}
+              defaultValue={user.email}
               placeholder="Please Enter Your Name"
               className="w-full border-2 border-[#e8604c] rounded-md px-4 py-3 outline-none"
             />
@@ -204,7 +204,7 @@ const AddTourists = () => {
         <div>
           <input
             type="submit"
-            value="Add"
+            defaultValue="Add"
             className="w-full btn border-2 bg-[#e8604c] hover:bg-transparent hover:border-[#e8604c] rounded-md font-bold text-xl text-white hover:text-[#e8604c] outline-none mt-5 "
           />
         </div>

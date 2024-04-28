@@ -61,16 +61,18 @@ const Navbar = () => {
           Add Tourists Spot
         </NavLink>
       )}
-      <NavLink
-        to="/mylist"
-        className={({ isActive }) =>
-          isActive
-            ? "lg:border-b-2 border-[#e8604c] text-[#e8604c] underline lg:no-underline"
-            : "border-none"
-        }
-      >
-        My List
-      </NavLink>
+      {user && (
+        <NavLink
+          to="/mylist"
+          className={({ isActive }) =>
+            isActive
+              ? "lg:border-b-2 border-[#e8604c] text-[#e8604c] underline lg:no-underline"
+              : "border-none"
+          }
+        >
+          My List
+        </NavLink>
+      )}
     </div>
   );
   return (

@@ -41,16 +41,15 @@ const Register = () => {
           photoURL: photo,
         });
 
-        const userEmail = {email, name}
+        // const userEmail = {email, name}
 
-
-        fetch("http://localhost:5000/registerUsers", {
-          method: 'POST',
-          headers: {
-            "content-type" : "application/json"
-          },
-          body: JSON.stringify(userEmail)
-        })
+        // fetch("http://localhost:5000/registerUsers", {
+        //   method: 'POST',
+        //   headers: {
+        //     "content-type" : "application/json"
+        //   },
+        //   body: JSON.stringify(userEmail)
+        // })
 
         return toast.success("your register successfull")
       })
@@ -143,7 +142,7 @@ const Register = () => {
           <label className="mt-5 block">
             <input
               type="submit"
-              value="Register"
+              defaultValue="Register"
               className="w-full bg-[#e8604c] btn hover:bg-[#e8604c] text-white text-xl font-semibold outline-none"
             />
           </label>

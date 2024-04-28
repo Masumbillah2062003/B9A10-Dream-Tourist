@@ -91,7 +91,7 @@ const Login = () => {
           <label className="mt-8 block">
             <input
               type="submit"
-              value="Log In"
+              defaultValue="Log In"
               className="w-full bg-[#e8604c] btn hover:bg-[#e8604c] text-white text-xl font-semibold outline-none"
             />
           </label>
