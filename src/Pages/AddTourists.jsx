@@ -1,6 +1,12 @@
+
 import Swal from "sweetalert2";
+import { AuthContext } from "../Provider/AuthProvider";
+import { useContext } from "react";
 
 const AddTourists = () => {
+
+  const {user} = useContext(AuthContext)
+  
   const handleDataSubmit = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -65,6 +71,7 @@ const AddTourists = () => {
             <input
               type="text"
               name="userName"
+              value={user.displayName}
               placeholder="Please Enter Your Name"
               className="w-full border-2 border-[#e8604c] rounded-md px-4 py-3 outline-none"
             />
@@ -76,6 +83,7 @@ const AddTourists = () => {
             <input
               type="text"
               name="userEmail"
+              value={user.email}
               placeholder="Please Enter Your Name"
               className="w-full border-2 border-[#e8604c] rounded-md px-4 py-3 outline-none"
             />
