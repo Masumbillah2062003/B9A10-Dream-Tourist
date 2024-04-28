@@ -9,6 +9,7 @@ import Login from "../Component/Login";
 import Register from "../Component/Register";
 import TourDetails from "../Component/TourDetails";
 import PrivateRoute from "./PrivateRoute";
+import Update from "../Component/Update";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,11 @@ const router = createBrowserRouter([
         element: <MyList></MyList>,
         loader: ()=> fetch("http://localhost:5000/assignment")
       },
+      {
+        path: "/update/:id",
+        element: <Update></Update>
+      }
+      ,
       {
         path: "login",
         element: <Login></Login>
