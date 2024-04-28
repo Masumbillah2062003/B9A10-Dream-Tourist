@@ -22,6 +22,7 @@ const Login = () => {
     signIn(email, password)
       .then((result) => {
         console.log(result.user);
+
         navigate(location.state ? location.state : "/")
         return toast.success("your login successfull");
       })
