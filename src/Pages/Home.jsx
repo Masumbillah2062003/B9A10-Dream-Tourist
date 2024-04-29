@@ -4,6 +4,7 @@ import TourCard from "../Component/TourCard";
 import left from "../assets/images/left.jpg";
 import plen from "../assets/images/plean.png";
 import map from "../assets/images/location.png";
+import offer from '../assets/images/fifteen.png'
 
 const Home = () => {
   const tourData = useLoaderData();
@@ -34,7 +35,23 @@ const Home = () => {
       </div>
 
       {/* extra section */}
-      <div className="w-full flex lg:flex-row flex-col lg:h-[763px] mb-20">
+
+
+      <div className="lg:flex bg-[#e8614c] lg:p-20 p-4">
+        <figure className="lg:w-1/2 h-[300px] flex justify-center items-center">
+          <img src={offer} alt="" className="w-[200px]" />
+        </figure>
+        <div className="lg:w-1/2 flex pb-5 justify-center flex-col text-white space-y-2 lg:space-x-0">
+          <h1 className="lg:text-5xl text-3xl font-bold">Last Minute Offer For You</h1>
+          <h2 className="lg:text-3xl text-xl font-semibold lg:mt-10">Offers of all tourist places in Bangladesh</h2>
+          <p className="lg:text-xl text-base font-medium text-[#dcdbdbfa] lg:mt-5">Tourism offers a wide range of benefits, including economic benefits for countries attracting many visitors due to the money they spend not only on their actual stay but also on local businesses. It also provides many jobs for people working in the transport and hospitality industry, among others.</p>
+          <button className="btn text-xl w-60 font-bold bg-transparent hover:bg-transparent border-white text-white mt-5">View More</button>
+        </div>
+      </div>
+
+
+
+      <div className="w-full flex lg:flex-row flex-col lg:h-[763px] mt-24 mb-20">
         <div className="lg:w-1/2">
           <img src={left} className="w-full lg:h-full h-[350px]" />
         </div>

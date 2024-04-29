@@ -7,9 +7,10 @@ import Swal from "sweetalert2";
 
 const MyList = () => {
   const { user, loading } = useContext(AuthContext);
-  const [match, setMatch] = useState([]);
-  const [tour, setTour] = useState(match);
+  const [tour, setTour] = useState([]);
   
+
+
   const handleDelete = (_id) => {
     Swal.fire({
       title: "Are you sure?",
@@ -33,7 +34,9 @@ const MyList = () => {
                 text: "Your coffee has been deleted.",
                 icon: "success",
               });
+              console.log(tour)
               const remaining = tour.filter((t) => t._id !== _id);
+              console.log(remaining)
               setTour(remaining);
             }
           });
@@ -46,7 +49,7 @@ const MyList = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        setMatch(data);
+        setTour(data);
       });
   }, [user]);
 
@@ -67,7 +70,7 @@ const MyList = () => {
     <div className="py-16">
         <h1 className="text-4xl mb-16 font-bold text-center text-[#e8604c]">My List</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {match.map((loadedData) => (
+        {tour.map((loadedData) => (
           <div
             key={loadedData._id}
             className=" lg:w-full border rounded-2xl p-6 gap-6"

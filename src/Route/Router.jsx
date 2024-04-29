@@ -39,7 +39,7 @@ const router = createBrowserRouter([
       {
         path: "/mylist",
         element: <PrivateRoute><MyList></MyList></PrivateRoute>,
-        // loader: ()=> fetch("http://localhost:5000/assignment")
+        // loader: ()=> fetch(`http://localhost:5000/myList/${user?.email}`)
       },
       {
         path: "/update/:id",

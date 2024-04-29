@@ -142,14 +142,14 @@ const Register = () => {
           <label className="mt-5 block">
             <input
               type="submit"
-              defaultValue="Register"
+              value="Register"
               className="w-full bg-[#e8604c] btn hover:bg-[#e8604c] text-white text-xl font-semibold outline-none"
             />
           </label>
         </form>
         <div className="mt-2">
           <p className="text-center">
-            New to this website ? Please ?
+            you are already register ? Please ?
             <Link to="/login" className="underline font-bold text-blue-400">
               Log In
             </Link>

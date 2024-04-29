@@ -22,6 +22,12 @@ Welcome to My Website! My website name is
 
 ## Added implementation packages
 
-- **a.** ,
-- **b.** ,
+- **a.** React-simple-typewriter,
+- **b.** React-tooltip,
+
+## My selected category's name
+
+- **1.**,
+- **2.** ,
+
 

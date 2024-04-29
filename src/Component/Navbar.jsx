@@ -2,10 +2,11 @@ import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import toast from "react-hot-toast";
+import { Tooltip } from "react-tooltip";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
-  const [theme, setheme] = useState("light");
+  const [theme, setheme] = useState(localStorage.getItem("theme") || "light");
 
   useEffect(() => {
     localStorage.setItem("theme", theme);
@@ -102,7 +103,7 @@ const Navbar = () => {
             {navlinks}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">daisyUI</a>
+        <a className="btn btn-ghost text-xl">Dream Tourist</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navlinks}</ul>
@@ -152,8 +153,10 @@ const Navbar = () => {
                         ? user?.photoURL
                         : "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
                     }
-                    value={user?.displayName}
+                    data-tooltip-id="my-tooltip"
+                    data-tooltip-content={user?.displayName}
                   />
+                  <Tooltip id="my-tooltip" />
                 </div>
               </div>
               <ul

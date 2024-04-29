@@ -5,10 +5,10 @@ import { AuthContext } from "../Provider/AuthProvider";
 import toast from "react-hot-toast";
 
 const Login = () => {
-  const { signIn, loading } = useContext(AuthContext);
-  const location = useLocation()
-  console.log(location)
-  const navigate = useNavigate()
+  const { signIn, loading, google, github } = useContext(AuthContext);
+  const location = useLocation();
+  console.log(location);
+  const navigate = useNavigate();
 
   const {
     register,
@@ -22,12 +22,36 @@ const Login = () => {
     signIn(email, password)
       .then((result) => {
         console.log(result.user);
-
-        navigate(location.state ? location.state : "/")
+        navigate(location.state ? location.state : "/");
         return toast.success("your login successfull");
       })
       .catch((error) => {
         console.log(error);
+      });
+  };
+
+  const handleGoogle = () => {
+    google()
+      .then((result) => {
+        console.log(result);
+        navigate(location?.state ? location.state : "/");
+        return toast.success("google log in successfull");
+      })
+      .catch((error) => {
+        console.error(error);
+        return toast.error("google log in failed");
+      });
+  };
+  const handleGithub = () => {
+    github()
+      .then((result) => {
+        console.log(result);
+        navigate(location?.state ? location.state : "/");
+        return toast.success("Github log in successfull");
+      })
+      .catch((error) => {
+        console.error(error);
+        return toast.error("Github log in failed");
       });
   };
 
@@ -91,11 +115,27 @@ const Login = () => {
           <label className="mt-8 block">
             <input
               type="submit"
-              defaultValue="Log In"
+              value="Log In"
               className="w-full bg-[#e8604c] btn hover:bg-[#e8604c] text-white text-xl font-semibold outline-none"
             />
           </label>
         </form>
+
+        <div className="flex justify-center items-center gap-6 mt-5">
+          <button
+            onClick={handleGoogle}
+            className="bg-transparent btn hover:bg-transparent border border-[#e8604c]"
+          >
+            Google
+          </button>
+          <button
+            onClick={handleGithub}
+            className="bg-transparent btn hover:bg-transparent border border-[#e8604c]"
+          >
+            GitHub
+          </button>
+        </div>
+
         <div className="mt-2">
           <p className="text-center">
             New to this website ? Please ?
