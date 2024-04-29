@@ -64,7 +64,8 @@ const MyList = () => {
   }
 
   return (
-    <div>
+    <div className="py-16">
+        <h1 className="text-4xl mb-16 font-bold text-center text-[#e8604c]">My List</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {match.map((loadedData) => (
           <div
