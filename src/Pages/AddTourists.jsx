@@ -1,12 +1,10 @@
-
 import Swal from "sweetalert2";
 import { AuthContext } from "../Provider/AuthProvider";
 import { useContext } from "react";
 
 const AddTourists = () => {
+  const { user } = useContext(AuthContext);
 
-  const {user} = useContext(AuthContext)
-  
   const handleDataSubmit = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -21,6 +19,7 @@ const AddTourists = () => {
     const totalVisitors = form.totalVisitors.value;
     const userEmail = form.userEmail.value;
     const userName = form.userName.value;
+
 
     const allData = {
       image,
@@ -37,23 +36,24 @@ const AddTourists = () => {
     };
     console.log(allData);
 
-    fetch("http://localhost:5000/assignment", {
+    fetch("https://b9a10-assignment-server.vercel.app/assignment", {
       method: "POST",
       headers: {
-        "content-type" : "application/json"
+        "content-type": "application/json",
       },
-      body: JSON.stringify(allData)
+      body: JSON.stringify(allData),
     })
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        if(data.insertedId){
-            Swal.fire({
-                title: 'Success!',
-                text: 'user Added successfully',
-                icon: 'success',
-                confirmButtonText: 'Cool'
-              })
+        if (data.insertedId) {
+          Swal.fire({
+            title: "Success!",
+            text: "user Added successfully",
+            icon: "success",
+            confirmButtonText: "Cool",
+          });
+          
         }
       });
   };
@@ -65,7 +65,7 @@ const AddTourists = () => {
       <form onSubmit={handleDataSubmit}>
         <div className="flex gap-8">
           <label className="w-1/2">
-          <span className="text-[#e8604c] font-medium text-xl py-2 block">
+            <span className="text-[#e8604c] font-medium text-xl py-2 block">
               User Name
             </span>
             <input
@@ -88,10 +88,9 @@ const AddTourists = () => {
               className="w-full border-2 border-[#e8604c] rounded-md px-4 py-3 outline-none"
             />
           </label>
-          
         </div>
         <div className="flex gap-8">
-        <label className="w-1/2">
+          <label className="w-1/2">
             <span className="text-[#e8604c] font-medium text-xl py-2 block">
               Tourists Spot Name
             </span>
@@ -106,14 +105,16 @@ const AddTourists = () => {
             <span className="text-[#e8604c] font-medium text-xl py-2 block">
               Country Name
             </span>
-            <input
-              type="text"
-              name="countryName"
-              placeholder="Please Enter Your Name"
-              className="w-full border-2 border-[#e8604c] rounded-md px-4 py-3 outline-none"
-            />
+
+            <select id="country" name="countryName" className="w-full border-2 border-[#e8604c] rounded-md px-4 py-3 outline-none">
+              <option value="Bangladesh">Bangladesh</option>
+              <option value="Thailand">Thailand</option>
+              <option value="Indonesia">Indonesia</option>
+              <option value="Malaysia">Malaysia</option>
+              <option value="Vietnam">Vietnam</option>
+              <option value="Cambodia">Cambodia</option>
+            </select>
           </label>
-          
         </div>
         <div className="flex gap-8">
           <label className="w-1/2">
@@ -188,9 +189,8 @@ const AddTourists = () => {
           </label>
         </div>
         <div className="flex gap-8">
-            
           <label className="w-full">
-          <span className="text-[#e8604c] font-medium text-xl py-2 block">
+            <span className="text-[#e8604c] font-medium text-xl py-2 block">
               Image URL
             </span>
             <input
@@ -204,7 +204,7 @@ const AddTourists = () => {
         <div>
           <input
             type="submit"
-            defaultValue="Add"
+            value="Add"
             className="w-full btn border-2 bg-[#e8604c] hover:bg-transparent hover:border-[#e8604c] rounded-md font-bold text-xl text-white hover:text-[#e8604c] outline-none mt-5 "
           />
         </div>

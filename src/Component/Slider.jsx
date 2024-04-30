@@ -5,7 +5,6 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { A11y, Navigation, Pagination, Scrollbar } from "swiper/modules";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
-
 import martin from "../assets/images/martin.jpg";
 import bangkok from "../assets/images/bangkok.jpg";
 import malaysia from "../assets/images/Malaysia.jpg";
@@ -21,7 +20,7 @@ const Slider = () => {
   return (
     <div>
       <div className="hidden lg:block">
-        <Swiper
+        <Swiper 
           // install Swiper modules
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={50}
@@ -32,7 +31,7 @@ const Slider = () => {
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log("slide change")}
         >
-          <SwiperSlide className="h-[550px] relative">
+          <SwiperSlide className="h-[550px]  relative">
             <img src={martin} alt="" className="w-full h-[550px]" />
             <div className="absolute top-0 flex justify-around w-full h-full bg-[#313041a0]">
               <div className="flex flex-col justify-center items-center">
@@ -52,7 +51,7 @@ const Slider = () => {
               </div>
             </div>
           </SwiperSlide>
-          <SwiperSlide className="h-[550px] relative">
+          <SwiperSlide className="h-[550px]  relative">
             <img src={bangkok} alt="" className="w-full h-[550px]" />
             <div className="absolute top-0 flex justify-around w-full h-full bg-[#313041a0]">
               <div className="flex flex-col justify-center items-start">
@@ -72,7 +71,7 @@ const Slider = () => {
               </div>
             </div>
           </SwiperSlide>
-          <SwiperSlide className="h-[550px] relative">
+          <SwiperSlide className="h-[550px]  relative">
             <img src={malaysia} alt="" className="w-full h-[550px]" />
             <div className="absolute top-0 flex justify-around w-full h-full bg-[#313041a0]">
               <div className="flex flex-col justify-center items-start">
@@ -95,13 +94,14 @@ const Slider = () => {
       </div>
       <div className="lg:hidden block">
         <div className="carousel w-full">
-          <div id="slide1" className="carousel-item relative w-full">
+          <div className="carousel-item  relative w-full">
             <img src={martin} className="w-full" />
             <div className="absolute top-0 flex justify-around w-full h-full bg-[#313041a0]">
               <div className="mt-10 -ml-24">
                 <div className=" rounded-lg text-center">
-                  <h1 className="text-[#e8604c] text-base md:text-4xl font-bold">
-                    St. Martins Island
+                  <h1 className="text-[#e8604c] text-xl md:text-4xl font-bold">
+                  <span>{text}</span>
+                    <Cursor cursorColor="tometo" />
                   </h1>
                   <p className="w-[200px] md:w-[600px] text-white md:text-start text-[10px] md:text-2xl mt-3">
                     St. Martin is generally known as “Narikel Zinzira” in
@@ -126,13 +126,13 @@ const Slider = () => {
               </a>
             </div>
           </div>
-          <div id="slide2" className="carousel-item relative w-full">
+          <div className="carousel-item  relative w-full">
             <img src={bangkok} className="w-full" />
             <div className="absolute top-0 flex justify-around w-full h-full bg-[#313041a0]">
               <div className="mt-10 -ml-24">
                 <div className=" rounded-lg text-center">
-                  <h1 className="text-[#e8604c] text-base md:text-4xl font-bold">
-                    Bangkok, Thailand
+                  <h1 className="text-[#e8604c] text-xl md:text-4xl font-bold">
+                  Bangkok, Thiland
                   </h1>
                   <p className="w-[200px] md:w-[600px] text-white md:text-start text-[10px] md:text-2xl mt-3">
                     Bangkok is renowned for its vibrant street life, rich
@@ -157,12 +157,12 @@ const Slider = () => {
               </a>
             </div>
           </div>
-          <div id="slide3" className="carousel-item relative w-full">
+          <div className="carousel-item  relative w-full">
             <img src={malaysia} className="w-full" />
             <div className="absolute top-0 flex justify-around w-full h-full bg-[#313041a0]">
               <div className="mt-10 -ml-24">
                 <div className=" rounded-lg text-center">
-                  <h1 className="text-[#e8604c] text-base md:text-4xl font-bold">
+                  <h1 className="text-[#e8604c] text-xl md:text-4xl font-bold">
                     Kuala Lumpur, Malaysia
                   </h1>
                   <p className="w-[200px] md:w-[600px] text-white md:text-start text-[10px] md:text-2xl mt-3">

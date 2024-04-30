@@ -43,7 +43,7 @@ const Update = () => {
     };
     console.log(data);
 
-    fetch(`http://localhost:5000/assignment/${_id}`, {
+    fetch(`https://b9a10-assignment-server.vercel.app/assignment/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

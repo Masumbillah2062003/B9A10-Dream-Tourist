@@ -103,13 +103,13 @@ const Navbar = () => {
             {navlinks}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">Dream Tourist</a>
+        <Link to="/" className="btn btn-ghost lg:text-3xl text-[#e8604c] text-xl -mr-2">Dream Tourist</Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navlinks}</ul>
       </div>
-      <div className="navbar-end space-x-5">
-        <div>
+      <div className="navbar-end lg:space-x-5 space-x-2">
+        <div className="mt-2">
           <label className="swap swap-rotate">
             {/* this hidden checkbox controls the state */}
             <input
@@ -120,7 +120,7 @@ const Navbar = () => {
 
             {/* sun icon */}
             <svg
-              className="swap-off fill-current w-10 h-10"
+              className="swap-off fill-current lg:w-10 lg:h-10 w-7 h-7"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
             >
@@ -129,7 +129,7 @@ const Navbar = () => {
 
             {/* moon icon */}
             <svg
-              className="swap-on fill-current w-10 h-10"
+              className="swap-on fill-current lg:w-10 lg:h-10 w-7 h-7"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
             >
@@ -173,7 +173,7 @@ const Navbar = () => {
           ) : (
             <Link
               to="/login"
-              className="btn font-semibold text-xl bg-[#e8604c] hover:bg-transparent hover:text-[#e8604c] hover:border-[#e8604c] text-white"
+              className="btn font-semibold lg:text-xl bg-[#e8604c] hover:bg-transparent hover:text-[#e8604c] hover:border-[#e8604c] text-white"
             >
               Login
             </Link>

@@ -43,7 +43,7 @@ const Register = () => {
 
         // const userEmail = {email, name}
 
-        // fetch("http://localhost:5000/registerUsers", {
+        // fetch("https://b9a10-assignment-server.vercel.app/registerUsers", {
         //   method: 'POST',
         //   headers: {
         //     "content-type" : "application/json"

@@ -10,6 +10,7 @@ import Register from "../Component/Register";
 import TourDetails from "../Component/TourDetails";
 import PrivateRoute from "./PrivateRoute";
 import Update from "../Component/Update";
+import Country from "../Component/Country";
 
 const router = createBrowserRouter([
   {
@@ -20,17 +21,17 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: ()=> fetch("http://localhost:5000/assignment")
+        loader: ()=> fetch("https://b9a10-assignment-server.vercel.app/assignment")
       },
       {
         path: "/data/:id",
         element: <PrivateRoute><TourDetails></TourDetails></PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/assignment/${params.id}`)
+        loader: ({params}) => fetch(`https://b9a10-assignment-server.vercel.app/assignment/${params.id}`)
       },
       {
         path: "/allTourists",
         element: <AllTourists></AllTourists>,
-        loader: ()=> fetch("http://localhost:5000/assignment")
+        loader: ()=> fetch("https://b9a10-assignment-server.vercel.app/assignment")
       },
       {
         path: "/addTourists",
@@ -39,12 +40,11 @@ const router = createBrowserRouter([
       {
         path: "/mylist",
         element: <PrivateRoute><MyList></MyList></PrivateRoute>,
-        // loader: ()=> fetch(`http://localhost:5000/myList/${user?.email}`)
       },
       {
         path: "/update/:id",
         element: <Update></Update>,
-        loader: ({params}) => fetch(`http://localhost:5000/assignment/${params.id}`)
+        loader: ({params}) => fetch(`https://b9a10-assignment-server.vercel.app/assignment/${params.id}`)
       }
       ,
       {
@@ -54,6 +54,11 @@ const router = createBrowserRouter([
       {
         path: "register",
         element: <Register></Register>
+      },
+      {
+        path: "/country/:country",
+        element: <Country></Country>,
+        loader: ({params}) => fetch(`https://b9a10-assignment-server.vercel.app/country/${params.country}`)
       }
     ]
   },
