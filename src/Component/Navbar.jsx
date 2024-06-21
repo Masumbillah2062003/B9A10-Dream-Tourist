@@ -9,9 +9,7 @@ const Navbar = () => {
   const [theme, setheme] = useState(localStorage.getItem("theme") || "light");
 
   useEffect(() => {
-    localStorage.setItem("theme", theme);
-    const localTheme = localStorage.getItem("theme");
-    document.querySelector("html").setAttribute("data-theme", localTheme);
+   
   }, [theme]);
 
   const handleToggle = (e) => {
@@ -77,7 +75,7 @@ const Navbar = () => {
     </div>
   );
   return (
-    <div className="navbar sticky top-0 z-50 bg-white shadow-lg text-[#040404a2]">
+    <div className="navbar sticky top-0 z-50 bg-white dark:bg-black shadow-lg text-[#040404a2]">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

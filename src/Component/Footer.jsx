@@ -14,7 +14,7 @@ const Footer = () => {
         {/* Center Section */}
         <div className="mb-4 lg:mb-0">
           <p className="text-2xl mb-2">Contact Us:</p>
-          <p className="text-lg">Email: masumbillah@gamil.com</p>
+          <p className="text-lg">Email: .com</p>
           <p className="text-lg">Phone: +8801700011147</p>
         </div>
         

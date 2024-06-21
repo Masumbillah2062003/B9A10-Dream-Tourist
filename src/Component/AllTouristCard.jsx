@@ -52,7 +52,7 @@ const AllTouristCard = ({ toristData }) => {
           View Details
         </Link>
       </div>
-    </div>
+    </div>   
   );
 };
 
