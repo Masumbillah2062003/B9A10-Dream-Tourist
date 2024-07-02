@@ -1,5 +1,7 @@
 ## Overview
- website name is Dream Tourist
+ website name is Dream Tourist.
+ 
+ Tourists can post their interesting places here. They can also post here the details of the location and how much they will spend on the places they visit.
 
 ## Features and Characteristics
 
