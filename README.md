@@ -1,37 +1,27 @@
-# Website name 
-Welcome to My Website! My website name is Dream Tourist
-
-## Live Site URL
-[https://b9a10-assignment.web.app/](https://b9a10-assignment.web.app/)
-
+## Overview
+ website name is Dream Tourist
 
 ## Features and Characteristics
 
-- **Responsive Design:** my website is fully responsive
-  
-- **React JS:** I built my website entirely with React
-  
-- **Internet:** My website will show output with internet
-  
-- **MongoDB:** By adding data to the mongoDB database, the data is displayed on the website
+- **Firebase Authentication:** In the All Tourist Spots section, all tourist posted cards have a View Details button, clicking on that button will take a person to the login page if they're not logged in, and if they're logged in, they'll see the full details of that card. .
 
-- **Firebase:** Firebase is used in the website
-  
-- **Features Added :** On the website we have put the per night price of each bed of the hotel and the title of the bed and a button, if you click on the button you can see the full details along with the review of the bed.
+- **Add Tourist Spot:** How much the tourists will spend in the places they see, the details about the location will also be written here in the Add Tourist spot section, it will be shown in the Home and All Tourist section.
 
+- **Update & Delete:** The tourist who has posted the card can only update or delete his cards in the My List section. There is an update button, a view button, and a delete button. Clicking on update button will update, clicking on delete button will delete
 
-## Added implementation packages
+## Use Technologes 
 
-- **a.** React-simple-typewriter,
-- **b.** React-tooltip,
-
-## My selected category name Southeast Asia
-## Sub Category's Name : 
-- **1.*Bangladesh*,
-- **2.*Thailand* ,
-- **3.*Malaysia* ,
-- **4.*Indonesia* ,
-- **5.*Vietnam* ,
-- **6.*Cambodia* ,
+  - **React JS**
+  - **Tailwind CSS** 
+  - **Firebase**
+  - **Node JS**
+  - **Express JS**
+  - **MongoDB**
 
 
+  ## Project Clone 
+  - **git clone [repository URL]** 
+  - **cd [project directory]** 
+  - **npm install** 
+  - **Firebase key added .env file** 
+  - **npm run dev** 
